@@ -34,6 +34,10 @@ public class PortaController : MonoBehaviour
         
         if (!isOpen)
         {
+            SaveSystem.Instance.SavePlayerLevel(2);
+            SaveSystem.Instance.SavePlayerName("Goku");
+            SaveSystem.Instance.SaveToFile();
+            
             anim.StopPlayback();
             anim.Play("PortaAbrindo");
             isOpen = true;
